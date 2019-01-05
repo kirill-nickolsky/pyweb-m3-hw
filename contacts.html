@@ -1,0 +1,347 @@
+<!--
+#module 3
+#block 2
+#HTML
+-->
+
+<!-- ************ -->
+<!-- Перечисления -->
+<!-- ************ -->
+
+<!-- <ul>
+  <li>Телефон: +79660906090</li>
+  <li>e-mail: my-email@gmail.com</li>
+</ul> -->
+
+<html>
+	<head>>
+		<meta charset="utf-8">
+		<title>Контакты</title>
+	</head>
+	<body>
+		<h1>Тлфон</h1>
+
+		<img src="phone.png" width="10%" />
+
+		<ul>
+			<li>Телефон: +79660906090</li>
+			<li>e-mail: my-email@gmail.com</li>
+		</ul>
+		
+		<ul>
+	<li>Контакты:
+		<ol>
+			<li>Телефон: ...</li>
+			<li>e-mail: ...</li>
+		</ol>
+	</li>
+	<li>Адрес:
+		<ul>
+			<li>Москва: ....</li>
+			<li>С-Пб: ...</li>
+			<li>Казань: ...</li>
+			<li>Владивосток: ...</li>
+		</ul>
+	</li>
+</ul>
+
+		<a href="index.html">
+			Назад
+		</a>
+	</body>
+</html>
+
+
+<!-- ************ -->
+
+
+
+
+
+
+
+
+
+
+<!-- index.html -->
+<!-- <html>
+	<head>>
+		<meta charset="utf-8">
+		<title>Основная страница</title>
+	</head>
+	<body>
+		<h1>Заголовок</h1>
+		<h2>Подзаголовок</h2>
+		 &nbsp
+		<a href="about.html">
+			O нас
+		</a>
+		 &nbsp
+		<a href="contacts.html">
+			Контакты
+		</a>
+	</body>
+</html> -->
+
+<!-- ********************* -->
+<!-- добавляем изображения -->
+<!-- ********************* -->
+
+<!-- <html>
+	<head>>
+		<meta charset="utf-8">
+		<title>Контакты</title>
+	</head>
+	<body>
+		<h1>Тлфн</h1>
+
+		<img src="phone.png" width="10%/>
+
+		<a href="index.html">
+			Назад
+		</a>
+	</body>
+</html> -->
+
+
+<!-- ******************************* -->
+<!-- пример со ссылками на два файла -->
+<!-- ******************************* -->
+
+<!-- index.html -->
+<!-- <html>
+	<head>>
+		<meta charset="utf-8">
+		<title>Основная страница</title>
+	</head>
+	<body>
+		<h1>Заголовок</h1>
+		<h2>Подзаголовок</h2>
+
+		<p>Кстати, немного <a href="about.html">про нас</a>.</p>
+	</body>
+</html>
+ -->
+<!-- about.html -->
+<!-- <html>
+	<head>>
+		<meta charset="utf-8">
+		<title>О нас</title>
+	</head>
+	<body>
+		<h1>Всё что вы хотели узнать</h1>
+
+		<p><a href="index.html">Назад на главную</a>.</p>
+	</body>
+</html>
+ -->
+<!-- Для создания ссылок используется тэг <a> -->
+<!-- <html>
+	<head>
+		<meta charset="utf-8">
+		<title>Полный пример</title>
+	</head>
+	<body>
+		<h1>Заголовок</h1>
+		<h2>Подзаголовок</h2>
+
+		<p>Абзац текста</p>
+		<p>Ещё абзац</p>
+	</body>
+</html>
+
+
+<meta charset="utf-8">
+<h1>Второй пример</h1>
+
+<h2>
+	Подзаголовок
+</h2>
+
+<p>
+	Тоже текст, но не заголовок и не подзаголовок
+</p>
+
+<p>
+	Снова текст
+</p>
+
+<meta charset="utf-8">
+<h1>Первый пример</h1>
+<p> то же текст, но не заголовок</p>
+
+#module #2
+#block 4
+#modules:
+#homework
+#get all in 0ne:
+#1) user inputs email. 3 attemts, 10 seconds pause after
+#2) email to lowercase and get login (before @)
+#3) DB user check,
+#		if new user: greetings
+#		if innactive 180 days: login approve
+#		if <180 ^ email approved till <date>
+
+#from datetime import datetime as dt, timedelta
+#from auth import get_email_from_user, make_username
+#from db import list_users, query_user_last_seen, check_user_is_active
+#
+#email = get_email_from_user(attempts=3, sleep_duration=10)
+#username = make_username(email)
+#print ("Вы вошли как " + username)
+#
+#registered_users = list_users()
+#last_seen = query_user_last_seen(username)
+#i = 0
+#while i < len(registered_users):
+#     Find_username = registered_users[i][0]
+#     if Find_username == username:
+#        #print(Find_username)
+#        #print(username)
+#        mark = True
+#        i=len(registered_users)
+#     else:
+#       i=i+1
+#       #print(username)
+#       #print(Find_username)
+#       mark = False
+#
+#if mark == False:
+#      print("Вы с нами совсем недавно! Добро пожаловать")
+#else:
+#   bul_user = check_user_is_active(username)
+#   data_end = dt.now() + timedelta(days=180)
+#   if bul_user == True :
+#           print("ваш аккаунт подтверждён до ...",data_end.date())
+#   else: Print("Вам нужно подтвердить логин")
+
+#a = list_users()[0]
+#print ("sergei" in list_users)
+
+
+
+
+#make function check_user_is_active
+#in: username Out:true\false last login was in 180 days?
+#1) get last seen
+#2) days from last login
+#3) 2 > 180?
+#from datetime import datetime as dt, timedelta
+#from db import query_user_last_seen, list_users
+#
+#def check_user_is_active (user_nm):
+#	last_seen = query_user_last_seen(user_nm)
+#	#print ("last_seen: "+str(last_seen))
+#	last_seen_plus_180 = last_seen + timedelta(days=180)
+#	#print ("last_seen_plus_180: "+str(last_seen_plus_180))
+#	#print (dt.now())
+#	is_active_flg = last_seen_plus_180 > dt.now()
+#	#print ("is_active_flg: "+str(is_active_flg))
+#	return is_active_flg
+#
+#print (check_user_is_active(user_nm = "sergei"))
+#existing_username = list_users()
+#print (existing_username)
+#db
+
+#from db import query_user_last_seen, list_users
+#
+#existing_username = list_users()[0][0]
+#last_seen = query_user_last_seen(existing_username)
+#print("Пользователь", existing_username, "последний раз заходил", last_seen)
+#print("Пользователь shrimp", existing_username, "последний раз заходил", query_user_last_seen("shrimp"))
+
+#from db import list_users
+#
+#registered_users = list_users()
+#i = 0
+#while i < len(registered_users):
+#    username = registered_users[i][0]
+#    last_seen = registered_users[i][1]
+#    print(i + 1, username, last_seen.date)
+
+#own module auth
+
+#import time
+#
+#from auth import get_email_from_user, make_username
+#
+#email = get_email_from_user()
+#username = make_username(email)
+#print("Вы вошли как " + username)
+
+#datetime module
+
+#from datetime import datetime as dt, timedelta
+#
+#py27_end_dt = dt(2020, 1, 1)
+#py27_days_left = (py27_end_dt - dt.now()).days
+#
+#print (py27_end_dt)
+#print (py27_days_left)
+
+#from datetime import datetime as dt, timedelta
+##from datetime import datetime as dt
+##from datetime import timedelta
+#
+#future = dt.now() + timedelta(days=180)
+#print("Ваш аккаунт действителен до", future)
+
+#from datetime import datetime as dt
+#print(dt.now() - dt(year=1983, month=9, day=26))
+#delta = dt.now() - dt(year=1983, month=9, day=26)
+#
+#print(delta)
+#print(delta.total_seconds() / (24 * 60 * 60))
+#print(delta.total_seconds() / (24 * 60 * 60) < 182.5)
+#print(delta.days)
+
+
+#from datetime import datetime as dt
+#ex = dt.now()
+#print(ex)
+#print("Месяц:", ex.month)
+#print("День:", ex.day)
+#print("Час:", ex.hour)
+#print("Минута:", ex.minute)
+#print("Секунда", ex.second)
+#
+
+
+#functions
+
+#import time # где-то верхушке файла
+#
+#def get_email_from_user(attempts=5, sleep_duration=15):
+#    email = input("Введите e-mail: ")
+#    i = 1
+#    while (email.find("@") == -1):
+#        print("неправильный email. Попробуйте ещё раз")
+#        i = i + 1
+#        email = input("Попытка " + str(i) + ". Введите e-mail: ")
+#        if i % attempts == 0:
+#            print("Переборщили с попытками. Подождите " + str(sleep_duration) + " секунд")
+#            time.sleep(sleep_duration)
+#    return email
+#
+#get_email_from_user(attempts=7, sleep_duration=20)
+#def get_email_from_user():
+#    email = input("Введите e-mail ")
+#    while email.find("@") == -1:
+#        print("неправильный email. Попробуйте ещё раз")
+#        email = input("Введите e-mail ")
+#    return email
+
+#def make_username(email):
+#    return email.split("@")[0].lower()
+
+#email = get_email_from_user()
+#username = make_username(email)
+#print("Вы вошли как " + username)
+
+#email = input("Введите e-mail ")
+#while email.find("@") == -1:
+#    print("неправильный email. Попробуйте ещё раз")
+#    email = input("Введите e-mail ")
+#username = email.split("@")[0].lower()
+#print("Вы вошли как " + username) -->
